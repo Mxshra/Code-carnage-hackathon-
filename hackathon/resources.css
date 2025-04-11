@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-top: 0.5em;
+}
+
+/* Main Content */
+main {
+    padding: 2em;
+}
+
+.resource-category {
+    background-color: white;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resource-category h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+}
+
+.resource-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-category li {
+    margin-bottom: 1.5em;
+}
+
+.resource-category a {
+    font-weight: bold;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.resource-category a:hover {
+    text-decoration: underline;
+}
+
+.resource-category p {
+    margin-top: 0.5em;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}

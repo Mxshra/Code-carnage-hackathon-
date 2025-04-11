@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resources Page</title>
+  <link rel="stylesheet" href="resources.css"/>
+  <style>
+    /* Fullscreen canvas background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: rgb(255, 255, 255);
+      background: #0f2027; /* fallback background */
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* transparent dark overlay */
+      border-radius: 10px;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h1, h2, p, a {
+      color: rgb(255, 255, 255);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .resource-category {
+      margin-bottom: 20px;
+      background-color:rgb(44, 76, 69)
+    }
+
+    .resource-category ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .nav-bar button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .nav-bar button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="nav-bar">
+      <button><a href="test3.html" style="color: white;">Home</a></button>
+      <button onclick="showPopup()">Log In</button>
+    </div>
+    <h1>Resources for Data Analysts</h1>
+    <p>Welcome to our curated list of tools and platforms designed to help you excel in Data Analytics. Here, you'll find resources for learning, data analysis, and productivity.</p>
+  </header>
+
+  <main>
+    <section class="resource-category">
+      <h2>Learning Platforms</h2>
+      <p>These platforms offer a wide range of courses and interactive learning experiences to enhance your skills in Data Analytics.</p>
+      <ul>
+        <li>
+          <a href="https://www.coursera.org" target="_blank">Coursera</a>
+          <p>Access online courses from top universities and institutions worldwide, covering topics like data science, machine learning, and statistics.</p>
+        </li>
+        <li>
+          <a href="https://www.khanacademy.org" target="_blank">Khan Academy</a>
+          <p>Free educational resources for students and teachers across various subjects, including math and statistics.</p>
+        </li>
+        <li>
+          <a href="https://www.datacamp.com" target="_blank">DataCamp</a>
+          <p>Interactive learning platform for data science and analytics, offering hands-on coding exercises and projects.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="resource-category">
+      <h2>Data Analysis Tools</h2>
+      <p>These tools are essential for data manipulation, visualization, and analysis.</p>
+      <ul>
+        <li>
+          <a href="https://www.python.org" target="_blank">Python</a>
+          <p>A versatile programming language used extensively in data analysis, machine learning, and automation.</p>
+        </li>
+        <li>
+          <a href="https://www.r-project.org" target="_blank">R</a>
+          <p>A programming language and environment for statistical computing and graphics.</p>
+        </li>
+        <li>
+          <a href="https://www.tableau.com" target="_blank">Tableau</a>
+          <p>Data visualization tool for creating interactive dashboards and stories.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="resource-category">
+      <h2>Productivity and Collaboration Tools</h2>
+      <p>Stay organized and collaborate effectively with these tools.</p>
+      <ul>
+        <li>
+          <a href="https://www.trello.com" target="_blank">Trello</a>
+          <p>A project management tool to organize tasks visually using boards and cards.</p>
+        </li>
+        <li>
+          <a href="https://www.notion.so" target="_blank">Notion</a>
+          <p>An all-in-one workspace for notes, tasks, databases, and collaboration.</p>
+        </li>
+        <li>
+          <a href="https://www.slack.com" target="_blank">Slack</a>
+          <p>A communication platform for teams and communities.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Resources Page | Designed for simplicity and usability.</p>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:999;"></div>
+  <div id="signupModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1a1a1a; padding:2rem; border-radius:12px; z-index:1000; width:90%; max-width:400px; box-shadow: 0 0 30px rgba(0,0,0,0.5); color:white;">
+    <h2 style="margin-bottom:1rem; color:#00ffff;">Sign Up for CareerGPS</h2>
+    <input type="email" placeholder="Enter your university email" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:8px; border:none;"/>
+    <input type="password" placeholder="Create a password" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:8px; border:none;"/>
+    <button style="width:100%; padding:0.75rem; background:linear-gradient(to right, #6a11cb, #2575fc); color:white; border:none; border-radius:8px;">Create Account</button>
+    <button onclick="hidePopup()" style="margin-top:1rem; width:100%; padding:0.75rem; background:none; border:1px solid #888; color:#ccc; border-radius:8px;">Cancel</button>
+  </div>
+
+  <!-- Particles.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 }
+        },
+        opacity: {
+          value: 0.4,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+        },
+        size: {
+          value: 2,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 }
+        }
+      },
+      retina_detect: true
+    });
+
+    function showPopup() {
+      document.getElementById('signupModal').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('signupModal').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

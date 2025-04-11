@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerGPS - Build Your Future</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    /* Full-page live background */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    }
+
+    header, nav, .hero, .video-section, footer {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a, .dropbtn, .search-and-auth a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: rgba(15, 32, 39, 0.6);
+      backdrop-filter: blur(5px);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #dddddd;
+    }
+
+    .cta input,
+    .cta button {
+      padding: 0.75rem 1.2rem;
+      margin: 0.5rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .cta input {
+      width: 250px;
+    }
+
+    .primary-btn {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .secondary-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .video-section {
+      margin-top: 4rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 16px;
+      backdrop-filter: blur(4px);
+    }
+
+    .video-section h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      padding-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Live Background -->
+  <div id="particles-js"></div>
+
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <svg aria-hidden="true" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path d="M8 0c4.42 0 8 3.58 ..."></path>
+        </svg>
+      </a>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="assessment.html">Assessment</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#">Roadmap</a></li>
+      </ul>
+      <div class="search-and-auth">
+        <input type="search" placeholder="Search or jump to..." />
+        
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Build and Navigate Your Dream Career Path</h1>
+    <p>Join the platform trusted by students worldwide to unlock their potential.</p>
+    <div class="cta">
+      
+      <button onclick="showPopup()">Sign up for CareerGPS</button>
+      <button class="secondary-btn">Try our Skill Assessment</button>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>See How It Works</h2>
+    <div class="video-container">
+      <video width="640" height="360" controls>
+        <source src="C:\Users\Gaurav Mishra\Downloads\videoplayback.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CareerGPS - Your path to success.</p>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:999;"></div>
+  <div id="signupModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1a1a1a; padding:2rem; border-radius:12px; z-index:1000; width:90%; max-width:400px; box-shadow: 0 0 30px rgba(0,0,0,0.5); color:white;">
+    <h2 style="margin-bottom:1rem; color:#00ffff;">Sign Up for CareerGPS</h2>
+    <input type="email" placeholder="Enter your university email" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:8px; border:none;"/>
+    <input type="password" placeholder="Create a password" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:8px; border:none;"/>
+    <button style="width:100%; padding:0.75rem; background:linear-gradient(to right, #6a11cb, #2575fc); color:white; border:none; border-radius:8px;">Create Account</button>
+    <button onclick="hidePopup()" style="margin-top:1rem; width:100%; padding:0.75rem; background:none; border:1px solid #888; color:#ccc; border-radius:8px;">Cancel</button>
+  </div>
+
+  <!-- Particle.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Particle.js Config -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+          "polygon": { "nb_sides": 5 }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 3,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    function showPopup() {
+      document.getElementById('signupModal').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('signupModal').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
