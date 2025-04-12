@@ -1,0 +1,69 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4faf9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #145c4d;
+  }
+  
+  .subtitle {
+    margin-bottom: 30px;
+    color: #4e7167;
+  }
+  
+  .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    background: #1e6f5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+  }
+  
+  .accordion-button:hover {
+    background: #155245;
+  }
+  
+  .accordion-button.active {
+    background: #155245;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 20px;
+    background: #ffffff;
+    text-align: left;
+  }
+  
+  .accordion-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .accordion-content li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  

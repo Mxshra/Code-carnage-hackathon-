@@ -1,0 +1,32 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(-45deg, #444, #222, #555, #333); /* Dark gradient */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+#domains {
+    padding: 20px;
+}
+
+.domain-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Flashy background animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

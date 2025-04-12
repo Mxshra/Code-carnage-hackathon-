@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Science Roadmap Dropdown</title>
+  <link rel="stylesheet" href="roadmap.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Data Science Roadmap</h1>
+    <p class="subtitle">Click each level to view the roadmap with explanations</p>
+
+    <div class="accordion">
+      <!-- Beginner -->
+      <div class="accordion-item">
+        <button class="accordion-button">Beginner</button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>What is Data Science?</strong> – Overview of data science roles, process, and applications.</li>
+            <li><strong>Python Basics</strong> – Syntax, data types, loops, functions, and basic scripting.</li>
+            <li><strong>Statistics & Probability</strong> – Mean, median, standard deviation, distributions, etc.</li>
+            <li><strong>Numpy & Pandas</strong> – Data manipulation, arrays, and tabular data operations.</li>
+            <li><strong>Matplotlib & Seaborn</strong> – Data visualization using Python libraries.</li>
+            <li><strong>Mini Projects</strong> – Simple real-world datasets to apply beginner skills.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Intermediate -->
+      <div class="accordion-item">
+        <button class="accordion-button">Intermediate</button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>Advanced Python</strong> – List comprehensions, OOP, decorators, and generators.</li>
+            <li><strong>Machine Learning</strong> – Core ML algorithms using Scikit-learn.</li>
+            <li><strong>Feature Engineering</strong> – Creating, transforming, and selecting features.</li>
+            <li><strong>SQL for Data</strong> – Querying, filtering, and joining databases.</li>
+            <li><strong>Model Evaluation</strong> – Accuracy, precision, recall, AUC, cross-validation.</li>
+            <li><strong>ML Projects</strong> – Real-world datasets to implement ML pipelines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Advanced -->
+      <div class="accordion-item">
+        <button class="accordion-button">Advanced</button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>Deep Learning</strong> – Neural networks using TensorFlow and PyTorch.</li>
+            <li><strong>Big Data Tools</strong> – Working with Hadoop, Spark, and distributed systems.</li>
+            <li><strong>Model Deployment</strong> – Serving models using Flask, Docker, or FastAPI.</li>
+            <li><strong>NLP / CV</strong> – Text processing and computer vision basics.</li>
+            <li><strong>Research / Open Source</strong> – Reading papers, contributing to GitHub projects.</li>
+            <li><strong>Optimization & Tuning</strong> – Hyperparameter tuning, grid/random search, AutoML.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".accordion-button");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
